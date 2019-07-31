@@ -199,6 +199,12 @@ impl DerefMut for Encoder {
     }
 }
 
+impl DerefMut for Encoder {
+    fn deref_mut(&mut self) -> &mut <Self as Deref>::Target {
+        &mut self.0
+    }
+}
+
 impl AsRef<Context> for Encoder {
     fn as_ref(&self) -> &Context {
         self
