@@ -510,6 +510,7 @@ impl Id {
 
 impl From<AVCodecID> for Id {
     fn from(value: AVCodecID) -> Self {
+        #[allow(unreachable_patterns)]
         match value {
             AV_CODEC_ID_NONE => Id::None,
 

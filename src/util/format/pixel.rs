@@ -353,6 +353,7 @@ impl Descriptor {
 impl From<AVPixelFormat> for Pixel {
     #[inline]
     fn from(value: AVPixelFormat) -> Self {
+        #[allow(unreachable_patterns)]
         match value {
             AV_PIX_FMT_NONE => Pixel::None,
 

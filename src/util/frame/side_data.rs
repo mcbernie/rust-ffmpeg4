@@ -46,6 +46,7 @@ impl Type {
 impl From<AVFrameSideDataType> for Type {
     #[inline(always)]
     fn from(value: AVFrameSideDataType) -> Self {
+        #[allow(unreachable_patterns)]
         match value {
             AV_FRAME_DATA_PANSCAN => Type::PanScan,
             AV_FRAME_DATA_A53_CC => Type::A53CC,

@@ -42,6 +42,7 @@ pub enum Type {
 
 impl From<AVPacketSideDataType> for Type {
     fn from(value: AVPacketSideDataType) -> Self {
+        #[allow(unreachable_patterns)]
         match value {
             AV_PKT_DATA_PALETTE => Type::Palette,
             AV_PKT_DATA_NEW_EXTRADATA => Type::NewExtraData,
