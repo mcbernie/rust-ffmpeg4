@@ -87,11 +87,11 @@ software-resampling = ["ffmpeg-sys/swresample"]
 software-scaling    = ["ffmpeg-sys/swscale", "codec"]
 
 [dependencies]
-libc     = "0.2"
+libc     = "0.2.65"
 bitflags = "1.2.1"
 
 [dependencies.image]
-version  = "0.12"
+version  = "0.22.3"
 optional = true
 
 [dependencies.ffmpeg-sys]
