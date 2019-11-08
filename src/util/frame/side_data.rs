@@ -30,6 +30,8 @@ pub enum Type {
 
     QpTableProperties,
     QpTableData,
+
+    S12MTimecode,
 }
 
 impl Type {
@@ -65,6 +67,7 @@ impl From<AVFrameSideDataType> for Type {
             // TODO It's undef #if in frame.h
             AV_FRAME_DATA_QP_TABLE_PROPERTIES => Type::QpTableProperties,
             AV_FRAME_DATA_QP_TABLE_DATA => Type::QpTableData,
+            AV_FRAME_DATA_S12M_TIMECODE => Type::S12MTimecode,
         }
     }
 }
@@ -93,6 +96,8 @@ impl Into<AVFrameSideDataType> for Type {
 
             Type::QpTableProperties => AV_FRAME_DATA_QP_TABLE_PROPERTIES,
             Type::QpTableData => AV_FRAME_DATA_QP_TABLE_DATA,
+
+            Type::S12MTimecode => AV_FRAME_DATA_S12M_TIMECODE,
         }
     }
 }

@@ -47,6 +47,10 @@ pub enum Pixel {
 
     GRAY16BE,
     GRAY16LE,
+    GRAY14BE,
+    GRAY14LE,
+    GRAYF32BE,
+    GRAYF32LE,
     YUV440P,
     YUVJ440P,
     YUVA420P,
@@ -218,9 +222,6 @@ pub enum Pixel {
 
     // --- defaults
     XVMC,
-    Y400A,
-    GRAY8A,
-    GBR24P,
 
     RGB32,
     RGB32_1,
@@ -392,6 +393,10 @@ impl From<AVPixelFormat> for Pixel {
 
             AV_PIX_FMT_GRAY16BE => Pixel::GRAY16BE,
             AV_PIX_FMT_GRAY16LE => Pixel::GRAY16LE,
+            AV_PIX_FMT_GRAY14BE => Pixel::GRAY14BE,
+            AV_PIX_FMT_GRAY14LE => Pixel::GRAY14LE,
+            AV_PIX_FMT_GRAYF32BE => Pixel::GRAYF32BE,
+            AV_PIX_FMT_GRAYF32LE => Pixel::GRAYF32LE,
             AV_PIX_FMT_YUV440P => Pixel::YUV440P,
             AV_PIX_FMT_YUVJ440P => Pixel::YUVJ440P,
             AV_PIX_FMT_YUVA420P => Pixel::YUVA420P,
@@ -633,6 +638,10 @@ impl Into<AVPixelFormat> for Pixel {
 
             Pixel::GRAY16BE => AV_PIX_FMT_GRAY16BE,
             Pixel::GRAY16LE => AV_PIX_FMT_GRAY16LE,
+            Pixel::GRAY14BE => AV_PIX_FMT_GRAY14BE,
+            Pixel::GRAY14LE => AV_PIX_FMT_GRAY14LE,
+            Pixel::GRAYF32BE => AV_PIX_FMT_GRAYF32BE,
+            Pixel::GRAYF32LE => AV_PIX_FMT_GRAYF32LE,
             Pixel::YUV440P => AV_PIX_FMT_YUV440P,
             Pixel::YUVJ440P => AV_PIX_FMT_YUVJ440P,
             Pixel::YUVA420P => AV_PIX_FMT_YUVA420P,
@@ -804,9 +813,6 @@ impl Into<AVPixelFormat> for Pixel {
 
             // --- defaults
             Pixel::XVMC => AV_PIX_FMT_XVMC,
-            Pixel::Y400A => AV_PIX_FMT_Y400A,
-            Pixel::GRAY8A => AV_PIX_FMT_GRAY8A,
-            Pixel::GBR24P => AV_PIX_FMT_GBR24P,
 
             Pixel::RGB32 => AV_PIX_FMT_RGB32,
             Pixel::RGB32_1 => AV_PIX_FMT_RGB32_1,
