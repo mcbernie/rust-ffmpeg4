@@ -997,6 +997,8 @@ impl From<AVCodecID> for Id {
             AV_CODEC_ID_FIRST_AUDIO => Id::FIRST_AUDIO,
             AV_CODEC_ID_FIRST_SUBTITLE => Id::FIRST_SUBTITLE,
             AV_CODEC_ID_TTML => Id::TTML,
+
+            _ => unimplemented!(),
         }
     }
 }

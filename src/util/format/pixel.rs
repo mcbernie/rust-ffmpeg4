@@ -591,6 +591,8 @@ impl From<AVPixelFormat> for Pixel {
             AV_PIX_FMT_GBRAPF32LE => Pixel::GBRAPF32LE,
             AV_PIX_FMT_DRM_PRIME => Pixel::DRM_PRIME,
             AV_PIX_FMT_OPENCL => Pixel::OPENCL,
+
+            _ => unimplemented!(),
         }
     }
 }

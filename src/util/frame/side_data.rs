@@ -68,6 +68,8 @@ impl From<AVFrameSideDataType> for Type {
             AV_FRAME_DATA_QP_TABLE_PROPERTIES => Type::QpTableProperties,
             AV_FRAME_DATA_QP_TABLE_DATA => Type::QpTableData,
             AV_FRAME_DATA_S12M_TIMECODE => Type::S12MTimecode,
+
+            _ => unimplemented!(),
         }
     }
 }

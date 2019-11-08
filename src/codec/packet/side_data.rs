@@ -72,6 +72,8 @@ impl From<AVPacketSideDataType> for Type {
             AV_PKT_DATA_ENCRYPTION_INIT_INFO => Type::EncryptionInitInfo,
             AV_PKT_DATA_ENCRYPTION_INFO => Type::EncryptionInfo,
             AV_PKT_DATA_AFD => Type::AFD,
+
+            _ => unimplemented!(),
         }
     }
 }
