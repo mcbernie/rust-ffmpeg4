@@ -10,7 +10,7 @@ authors = [
 license = "WTFPL"
 
 description = "Safe FFmpeg wrapper"
-repository  = "https://github.com/bacek/rust-ffmpeg"
+repository  = "https://github.com/bacek/rust-ffmpeg4"
 keywords    = ["audio", "video"]
 
 [features]
@@ -100,5 +100,3 @@ optional = true
 [dependencies.ffmpeg4-sys]
 version = "4.2"
 default-features = false
-git = "https://github.com/bacek/rust-ffmpeg-sys.git"
-branch = "v42"
