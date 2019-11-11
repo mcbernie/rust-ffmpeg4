@@ -3,7 +3,7 @@
 
 #[macro_use]
 extern crate bitflags;
-pub extern crate ffmpeg_sys as sys;
+pub extern crate ffmpeg4_sys as sys;
 #[cfg(feature = "image")]
 extern crate image;
 extern crate libc;

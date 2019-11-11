@@ -1,90 +1,93 @@
 [package]
-name    = "ffmpeg"
-version = "0.2.0-alpha.2"
+name    = "ffmpeg4"
+version = "0.4.0"
 build   = "build.rs"
 
-authors = ["meh. <meh@schizofreni.co>"]
+authors = [
+    "meh. <meh@schizofreni.co>",
+    "Vasily Chekalkin <bacek@bacek.com>",
+]
 license = "WTFPL"
 
 description = "Safe FFmpeg wrapper"
-repository  = "https://github.com/meh/rust-ffmpeg"
+repository  = "https://github.com/bacek/rust-ffmpeg"
 keywords    = ["audio", "video"]
 
 [features]
 default = ["codec", "device", "filter", "format", "resampling", "software-resampling", "software-scaling"]
 
-static = ["ffmpeg-sys/static"]
-build  = ["static", "ffmpeg-sys/build"]
+static = ["ffmpeg4-sys/static"]
+build  = ["static", "ffmpeg4-sys/build"]
 
 # licensing
-build-license-gpl      = ["ffmpeg-sys/build-license-gpl"]
-build-license-nonfree  = ["ffmpeg-sys/build-license-nonfree"]
-build-license-version3 = ["ffmpeg-sys/build-license-version3"]
+build-license-gpl      = ["ffmpeg4-sys/build-license-gpl"]
+build-license-nonfree  = ["ffmpeg4-sys/build-license-nonfree"]
+build-license-version3 = ["ffmpeg4-sys/build-license-version3"]
 
 # misc
-build-pic  = ["ffmpeg-sys/build-pic"]
-build-zlib = ["ffmpeg-sys/build-zlib"]
+build-pic  = ["ffmpeg4-sys/build-pic"]
+build-zlib = ["ffmpeg4-sys/build-zlib"]
 
 # ssl
-build-lib-gnutls  = ["ffmpeg-sys/build-lib-gnutls"]
-build-lib-openssl = ["ffmpeg-sys/build-lib-openssl"]
+build-lib-gnutls  = ["ffmpeg4-sys/build-lib-gnutls"]
+build-lib-openssl = ["ffmpeg4-sys/build-lib-openssl"]
 
 # filters
-build-lib-fontconfig = ["ffmpeg-sys/build-lib-fontconfig"]
-build-lib-frei0r     = ["ffmpeg-sys/build-lib-frei0r"]
-build-lib-ladspa     = ["ffmpeg-sys/build-lib-ladspa"]
-build-lib-ass        = ["ffmpeg-sys/build-lib-ass"]
-build-lib-freetype   = ["ffmpeg-sys/build-lib-freetype"]
-build-lib-freebidi   = ["ffmpeg-sys/build-lib-freebidi"]
-build-lib-opencv     = ["ffmpeg-sys/build-lib-opencv"]
+build-lib-fontconfig = ["ffmpeg4-sys/build-lib-fontconfig"]
+build-lib-frei0r     = ["ffmpeg4-sys/build-lib-frei0r"]
+build-lib-ladspa     = ["ffmpeg4-sys/build-lib-ladspa"]
+build-lib-ass        = ["ffmpeg4-sys/build-lib-ass"]
+build-lib-freetype   = ["ffmpeg4-sys/build-lib-freetype"]
+build-lib-freebidi   = ["ffmpeg4-sys/build-lib-freebidi"]
+build-lib-opencv     = ["ffmpeg4-sys/build-lib-opencv"]
 
 # encoders/decoders
-build-lib-aacplus          = ["ffmpeg-sys/build-lib-aacplus"]
-build-lib-celt             = ["ffmpeg-sys/build-lib-celt"]
-build-lib-dcadec           = ["ffmpeg-sys/build-lib-dcadec"]
-build-lib-faac             = ["ffmpeg-sys/build-lib-faac"]
-build-lib-fdk-aac          = ["ffmpeg-sys/build-lib-fdk-aac"]
-build-lib-gsm              = ["ffmpeg-sys/build-lib-gsm"]
-build-lib-ilbc             = ["ffmpeg-sys/build-lib-ilbc"]
-build-lib-kvazaar          = ["ffmpeg-sys/build-lib-kvazaar"]
-build-lib-mp3lame          = ["ffmpeg-sys/build-lib-mp3lame"]
-build-lib-opencore-amrnb   = ["ffmpeg-sys/build-lib-opencore-amrnb"]
-build-lib-opencore-amrwb   = ["ffmpeg-sys/build-lib-opencore-amrwb"]
-build-lib-openh264         = ["ffmpeg-sys/build-lib-openh264"]
-build-lib-openjpeg         = ["ffmpeg-sys/build-lib-openjpeg"]
-build-lib-opus             = ["ffmpeg-sys/build-lib-opus"]
-build-lib-schroedinger     = ["ffmpeg-sys/build-lib-schroedinger"]
-build-lib-shine            = ["ffmpeg-sys/build-lib-shine"]
-build-lib-snappy           = ["ffmpeg-sys/build-lib-snappy"]
-build-lib-speex            = ["ffmpeg-sys/build-lib-speex"]
-build-lib-stagefright-h264 = ["ffmpeg-sys/build-lib-stagefright-h264"]
-build-lib-theora           = ["ffmpeg-sys/build-lib-theora"]
-build-lib-twolame          = ["ffmpeg-sys/build-lib-twolame"]
-build-lib-utvideo          = ["ffmpeg-sys/build-lib-utvideo"]
-build-lib-vo-aacenc        = ["ffmpeg-sys/build-lib-vo-aacenc"]
-build-lib-vo-amrwbenc      = ["ffmpeg-sys/build-lib-vo-amrwbenc"]
-build-lib-vorbis           = ["ffmpeg-sys/build-lib-vorbis"]
-build-lib-vpx              = ["ffmpeg-sys/build-lib-vpx"]
-build-lib-wavpack          = ["ffmpeg-sys/build-lib-wavpack"]
-build-lib-webp             = ["ffmpeg-sys/build-lib-webp"]
-build-lib-x264             = ["ffmpeg-sys/build-lib-x264"]
-build-lib-x265             = ["ffmpeg-sys/build-lib-x265"]
-build-lib-avs              = ["ffmpeg-sys/build-lib-avs"]
-build-lib-xvid             = ["ffmpeg-sys/build-lib-xvid"]
+build-lib-aacplus          = ["ffmpeg4-sys/build-lib-aacplus"]
+build-lib-celt             = ["ffmpeg4-sys/build-lib-celt"]
+build-lib-dcadec           = ["ffmpeg4-sys/build-lib-dcadec"]
+build-lib-faac             = ["ffmpeg4-sys/build-lib-faac"]
+build-lib-fdk-aac          = ["ffmpeg4-sys/build-lib-fdk-aac"]
+build-lib-gsm              = ["ffmpeg4-sys/build-lib-gsm"]
+build-lib-ilbc             = ["ffmpeg4-sys/build-lib-ilbc"]
+build-lib-kvazaar          = ["ffmpeg4-sys/build-lib-kvazaar"]
+build-lib-mp3lame          = ["ffmpeg4-sys/build-lib-mp3lame"]
+build-lib-opencore-amrnb   = ["ffmpeg4-sys/build-lib-opencore-amrnb"]
+build-lib-opencore-amrwb   = ["ffmpeg4-sys/build-lib-opencore-amrwb"]
+build-lib-openh264         = ["ffmpeg4-sys/build-lib-openh264"]
+build-lib-openjpeg         = ["ffmpeg4-sys/build-lib-openjpeg"]
+build-lib-opus             = ["ffmpeg4-sys/build-lib-opus"]
+build-lib-schroedinger     = ["ffmpeg4-sys/build-lib-schroedinger"]
+build-lib-shine            = ["ffmpeg4-sys/build-lib-shine"]
+build-lib-snappy           = ["ffmpeg4-sys/build-lib-snappy"]
+build-lib-speex            = ["ffmpeg4-sys/build-lib-speex"]
+build-lib-stagefright-h264 = ["ffmpeg4-sys/build-lib-stagefright-h264"]
+build-lib-theora           = ["ffmpeg4-sys/build-lib-theora"]
+build-lib-twolame          = ["ffmpeg4-sys/build-lib-twolame"]
+build-lib-utvideo          = ["ffmpeg4-sys/build-lib-utvideo"]
+build-lib-vo-aacenc        = ["ffmpeg4-sys/build-lib-vo-aacenc"]
+build-lib-vo-amrwbenc      = ["ffmpeg4-sys/build-lib-vo-amrwbenc"]
+build-lib-vorbis           = ["ffmpeg4-sys/build-lib-vorbis"]
+build-lib-vpx              = ["ffmpeg4-sys/build-lib-vpx"]
+build-lib-wavpack          = ["ffmpeg4-sys/build-lib-wavpack"]
+build-lib-webp             = ["ffmpeg4-sys/build-lib-webp"]
+build-lib-x264             = ["ffmpeg4-sys/build-lib-x264"]
+build-lib-x265             = ["ffmpeg4-sys/build-lib-x265"]
+build-lib-avs              = ["ffmpeg4-sys/build-lib-avs"]
+build-lib-xvid             = ["ffmpeg4-sys/build-lib-xvid"]
 
 # protocols
-build-lib-smbclient = ["ffmpeg-sys/build-lib-smbclient"]
-build-lib-ssh       = ["ffmpeg-sys/build-lib-ssh"]
+build-lib-smbclient = ["ffmpeg4-sys/build-lib-smbclient"]
+build-lib-ssh       = ["ffmpeg4-sys/build-lib-ssh"]
 
 # components
-codec               = ["ffmpeg-sys/avcodec"]
-device              = ["ffmpeg-sys/avdevice", "format"]
-filter              = ["ffmpeg-sys/avfilter"]
-format              = ["ffmpeg-sys/avformat", "codec"]
-resampling          = ["ffmpeg-sys/avresample"]
-postprocessing      = ["ffmpeg-sys/postproc"]
-software-resampling = ["ffmpeg-sys/swresample"]
-software-scaling    = ["ffmpeg-sys/swscale", "codec"]
+codec               = ["ffmpeg4-sys/avcodec"]
+device              = ["ffmpeg4-sys/avdevice", "format"]
+filter              = ["ffmpeg4-sys/avfilter"]
+format              = ["ffmpeg4-sys/avformat", "codec"]
+resampling          = ["ffmpeg4-sys/avresample"]
+postprocessing      = ["ffmpeg4-sys/postproc"]
+software-resampling = ["ffmpeg4-sys/swresample"]
+software-scaling    = ["ffmpeg4-sys/swscale", "codec"]
 
 [dependencies]
 libc     = "0.2"
@@ -94,7 +97,7 @@ bitflags = "1.0"
 version  = "0.22"
 optional = true
 
-[dependencies.ffmpeg-sys]
+[dependencies.ffmpeg4-sys]
 version = "4.2"
 default-features = false
 git = "https://github.com/bacek/rust-ffmpeg-sys.git"
