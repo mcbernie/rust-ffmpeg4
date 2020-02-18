@@ -14,7 +14,7 @@ repository  = "https://github.com/bacek/rust-ffmpeg4"
 keywords    = ["audio", "video"]
 
 [features]
-default = ["codec", "device", "filter", "format", "resampling", "software-resampling", "software-scaling"]
+default = ["codec", "device", "filter", "format", "resampling", "software-scaling"]
 
 static = ["ffmpeg4-sys/static"]
 build  = ["static", "ffmpeg4-sys/build"]
@@ -84,9 +84,8 @@ codec               = ["ffmpeg4-sys/avcodec"]
 device              = ["ffmpeg4-sys/avdevice", "format"]
 filter              = ["ffmpeg4-sys/avfilter"]
 format              = ["ffmpeg4-sys/avformat", "codec"]
-resampling          = ["ffmpeg4-sys/avresample"]
+resampling          = ["ffmpeg4-sys/swresample"]
 postprocessing      = ["ffmpeg4-sys/postproc"]
-software-resampling = ["ffmpeg4-sys/swresample"]
 software-scaling    = ["ffmpeg4-sys/swscale", "codec"]
 
 [dependencies]
