@@ -6,6 +6,7 @@ build   = "build.rs"
 authors = [
     "meh. <meh@schizofreni.co>",
     "Vasily Chekalkin <bacek@bacek.com>",
+    "Nicolas Brüggemann <nb@zweiund40.com>",
 ]
 license = "WTFPL"
 
@@ -100,4 +101,4 @@ optional = true
 version = "4.2"
 default-features = false
 # Temporary change it
-git = "https://github.com/bacek/rust-ffmpeg4-sys"
+git = "https://github.com/mcbernie/rust-ffmpeg4-sys"
