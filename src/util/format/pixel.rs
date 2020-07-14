@@ -922,12 +922,12 @@ impl fmt::Display for ParsePixelError {
 }
 
 impl error::Error for ParsePixelError {
-    fn description(&self) -> &str {
+    /*fn description(&self) -> &str {
         match *self {
-            ParsePixelError::NulError(ref e) => e.description(),
+            ParsePixelError::NulError(ref e) => e.as_str(),
             ParsePixelError::UnknownFormat => "unknown pixel format",
         }
-    }
+    }*/
 
     fn cause(&self) -> Option<&dyn error::Error> {
         match *self {
